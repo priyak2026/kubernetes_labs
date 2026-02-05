@@ -1,0 +1,16 @@
+controlplane ~ ✖ kubectl get deployments
+NAME       READY   UP-TO-DATE   AVAILABLE   AGE
+frontend   4/4     4            4           36m
+
+controlplane ~ ➜  kubectl get replicasets
+NAME                  DESIRED   CURRENT   READY   AGE
+frontend-5bf498865c   4         4         4       23m
+frontend-67999b9c88   0         0         0       34m
+frontend-6b86c6b555   0         0         0       36m
+
+controlplane ~ ➜  kubectl get pods
+NAME                        READY   STATUS    RESTARTS   AGE
+frontend-5bf498865c-868fr   1/1     Running   0          23m
+frontend-5bf498865c-dnv24   1/1     Running   0          23m
+frontend-5bf498865c-lmtjh   1/1     Running   0          23m
+frontend-5bf498865c-sj9tt   1/1     Running   0          23m

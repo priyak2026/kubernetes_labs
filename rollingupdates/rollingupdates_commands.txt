@@ -1,0 +1,19 @@
+ 1  bash /root/curl-test.sh
+    2  kubectl get deployment
+    3  kubectl describe deployment frontend
+    4  kubectl edit deployment frontend
+    5  bash /root/curl-test.sh
+    6  kubectl edit deployment frontend
+    7  kubectl edit deployment frontend
+    8  bash /root/curl-test.sh
+    9  ls
+   10  cat curl-pod.yaml
+   11  cat curl-test.sh
+   12  describe deployment frontend
+   13  kubectl describe deployment frontend
+   14  kubectl rollout history deployment frontend
+   15  kubectl rollout status deployment frontend
+   16  kubectl describe deployment frontend
+   17  kubectl edit deployment frontend
+   18  kubectl get deployment frontend -o yaml
+   19  history

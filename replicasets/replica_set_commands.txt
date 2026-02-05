@@ -1,0 +1,37 @@
+  1  kubectl get pods
+    2  kubectl get replicaset
+    3  kubectl get replicaset
+    4  kubectl get replicaset
+    5  kubectl describe replicaset
+    6  kubectl get replicaset
+    7  kubectl delete pod <new-replica-set>
+    8  kubectl delete pod 
+    9  kubectl delete pod new-replica-set
+   10  kubectl delete pod replicaset
+   11  kubectl get pod
+   12  kubectl delete pod new-replica-set-dgv8w
+   13  kubectl get pod
+   14  kubectl api-resources | grep replicaset
+   15  kubectl explain replicaset | grep VERSION
+   16  kubectl apply -f /root/replicaset-definition-1.yaml
+   17  kubectl explain replicaset | grep VERSION
+   18  pwd
+   19  ls
+   20  nano replicaset-definition-1.yaml
+   21  kubectl apply -f /root/replicaset-definition-1.yaml
+   22  nano replicaset-definition-1.yaml
+   23  kubectl apply -f /root/replicaset-definition-1.yaml
+   24  ls
+   25  nano replicaset-definition-2.yaml
+   26  kubectl apply -f /root/replicaset-definition-2.yaml
+   27  kubectl get pods
+   28  kubectl delete  -f replicaset-definition-1.yaml
+   29  kubectl delete  -f replicaset-definition-2.yaml
+   30  kubectl edit replicaset new-replica-set
+   31  kubectl get pods
+   32  kubectl delete po new-replica-set-b5vmn
+   33  kubectl delete pods -l name=busybox-pod
+   34  kubectl edit replicaset new-replica-set
+   35  kubectl edit replicaset new-replica-set
+   36  kubectl edit replicaset new-replica-set
+   37  ls

@@ -1,0 +1,117 @@
+piVersion: v1
+kind: Pod
+metadata:
+  creationTimestamp: "2026-02-01T23:32:18Z"
+  generation: 2
+  labels:
+    run: redis
+  name: redis
+  namespace: default
+  resourceVersion: "1587"
+  uid: 58357df4-77c7-44b5-a6e6-4bbfaecfb277
+spec:
+  containers:
+  - image: redis
+    imagePullPolicy: Always
+    name: redis
+    resources: {}
+    terminationMessagePath: /dev/termination-log
+    terminationMessagePolicy: File
+    volumeMounts:
+    - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+      name: kube-api-access-btlb2
+      readOnly: true
+  dnsPolicy: ClusterFirst
+  enableServiceLinks: true
+  nodeName: controlplane
+  preemptionPolicy: PreemptLowerPriority
+  priority: 0
+  restartPolicy: Always
+  schedulerName: default-scheduler
+  securityContext: {}
+  serviceAccount: default
+  serviceAccountName: default
+  terminationGracePeriodSeconds: 30
+  tolerations:
+  - effect: NoExecute
+    key: node.kubernetes.io/not-ready
+    operator: Exists
+    tolerationSeconds: 300
+  - effect: NoExecute
+    key: node.kubernetes.io/unreachable
+    operator: Exists
+    tolerationSeconds: 300
+  volumes:
+  - name: kube-api-access-btlb2
+    projected:
+      defaultMode: 420
+      sources:
+      - serviceAccountToken:
+          expirationSeconds: 3607
+          path: token
+      - configMap:
+          items:
+          - key: ca.crt
+            path: ca.crt
+          name: kube-root-ca.crt
+      - downwardAPI:
+          items:
+          - fieldRef:
+              apiVersion: v1
+              fieldPath: metadata.namespace
+            path: namespace
+status:
+  conditions:
+  - lastProbeTime: null
+    lastTransitionTime: "2026-02-01T23:32:19Z"
+    observedGeneration: 2
+    status: "True"
+    type: PodReadyToStartContainers
+  - lastProbeTime: null
+    lastTransitionTime: "2026-02-01T23:32:18Z"
+    observedGeneration: 2
+    status: "True"
+    type: Initialized
+  - lastProbeTime: null
+    lastTransitionTime: "2026-02-01T23:36:22Z"
+    observedGeneration: 2
+    status: "True"
+    type: Ready
+  - lastProbeTime: null
+    lastTransitionTime: "2026-02-01T23:36:22Z"
+    observedGeneration: 2
+    status: "True"
+    type: ContainersReady
+  - lastProbeTime: null
+    lastTransitionTime: "2026-02-01T23:32:18Z"
+    observedGeneration: 2
+    status: "True"
+    type: PodScheduled
+  containerStatuses:
+  - containerID: containerd://fd0f37e46bde7db13f3b6fc226db1940a6ddcd882f16aa8743da03c5d09994b5
+    image: docker.io/library/redis:latest
+    imageID: docker.io/library/redis@sha256:73dad4271642c5966db88db7a7585fae7cf10b685d1e48006f31e0294c29fdd7
+    lastState: {}
+    name: redis
+    ready: true
+    resources: {}
+    restartCount: 0
+    started: true
+    state:
+      running:
+        startedAt: "2026-02-01T23:36:21Z"
+    volumeMounts:
+    - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+      name: kube-api-access-btlb2
+      readOnly: true
+      recursiveReadOnly: Disabled
+  hostIP: 192.168.75.149
+  hostIPs:
+  - ip: 192.168.75.149
+  observedGeneration: 2
+  phase: Running
+  podIP: 10.22.0.14
+  podIPs:
+  - ip: 10.22.0.14
+  qosClass: BestEffort
+  startTime: "2026-02-01T23:32:18Z"

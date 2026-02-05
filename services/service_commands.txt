@@ -1,0 +1,9 @@
+    1  kubectl get service
+    2  kubectl describe service
+    3  kubectl get deployments
+    4  kubectl get deployments
+    5  kubectl describe deployment
+    6  ls
+    7  nano service-definition-1.yaml
+    8  kubectl apply -f /root/service-definition-1.yaml
+    9  history

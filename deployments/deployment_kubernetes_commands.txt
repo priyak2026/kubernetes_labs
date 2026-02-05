@@ -1,0 +1,17 @@
+   1  kubectl get pods
+    2  kubectl get replicasets
+    3  kubectl get deployments
+    4  kubectl get deployments
+    5  kubectl get replicasets
+    6  kubectl get pods
+    7  kubectl describe deployment frontend-deployment
+    8  pwd
+    9  ls
+   10  cat deployment-definition-1.yaml
+   11  nano deployment-definition-1.yaml
+   12  kubectl explain deployment | head -n3
+   13  kubectl apply -f deployment-definition-1.yaml
+   14  nano deployment-definition-1.yaml
+   15  kubectl apply -f deployment-definition-1.yaml
+   16  kubectl create -f deployment-definition-httpd.yaml
+   
